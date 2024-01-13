@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(35, 36, 36);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Righteous', cursive;
+    margin: 20px;
+}
+p {
+    margin: 0;
+}
+.LetsStart { 
+    margin-top: 60px;
+    text-align: center;
+    align-items: center;
+    color: rgb(214, 139, 150, 0.05);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(126, 124, 124, 0.25);
+    transition: color 1s;
+    z-index: -1;
+    font-size: 100px;
+}

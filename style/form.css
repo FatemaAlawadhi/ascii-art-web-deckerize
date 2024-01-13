@@ -1,0 +1,101 @@
+.title {
+    font-size: 40px;
+}
+.title-container {
+    background-color: rgb(126, 124, 124, 0.25);
+    color: white;
+    align-items: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px rgb(214, 139, 150,0.7);
+    margin-top: 45px;
+
+}
+
+.form-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(126, 124, 124, 0.25);
+    color: white;
+    align-items: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px rgb(214, 139, 150,0.7);
+    width: 600px;
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+.text-input {
+    margin-top: 10px;
+    width: 400px;
+    height: 50px;
+    border-radius: 7px;
+    font-family: 'Righteous', cursive;
+    padding-left: 20px;
+    border-color:rgb(214, 139, 150);
+    font-size: 20px;
+}
+.EngMas{
+    margin-top: 7px;
+    color: white;
+    font-size: 15px;
+    display: none;
+}
+
+.Font-container {
+    margin-top: 20px;
+}
+.Banner {
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    font-family: 'Righteous', cursive;
+    font-size: 14px;
+    padding-left:13px;
+    border-color:rgb(214, 139, 150);
+    border-radius: 10px
+
+}
+.font-text{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.Submit-button {
+    width: 100px;
+    height: 40px;
+    font-family: 'Righteous', cursive;
+    font-size: 15px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border-color:rgb(214, 139, 150);
+    transition: background-color 1s;
+}
+
+.Submit-button:hover {
+    background-color: rgb(214, 139, 150);
+    border: none;
+
+}
+
+.output {
+    color: white;
+    align-items: center;
+    height: 20px;
+    margin-top: 40px;
+    width: 1000px;
+    text-align: center;
+    width:1300px;
+    font-size: 24px;
+}
+
+.result {
+    font-size: 18px;
+    margin-right: 10;
+    margin-left: 10;
+    margin-bottom: 45px;
+}

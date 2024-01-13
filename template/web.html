@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ascii Art Generator</title>
+    <link rel="stylesheet" type="text/css" href="../style/general.css">
+    <link rel="stylesheet" type="text/css" href="../style/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">Ascii Art Generator</h1>
+    </div>
+    <form class="form-container" method="POST" action="/ascii-art">
+        <label for="input-area">Text:</label>
+        <textarea id="input-area" rows="5" onkeydown="handleEnterKey(event)" class="text-input" name="Text"
+            placeholder="Type" oninput="validateASCII(event)" required></textarea>
+        <p id="english-message" class="EngMas">Please enter English characters only</p>
+        <div class="Font-container">
+            <label for="banner" class="font-text">Banner:</label>
+            <select id="banner" name="Font" class="Banner" required>
+                <option value="standard">Standard</option>
+                <option value="shadow">Shadow</option>
+                <option value="thinkertoy">Thinkertoy</option>
+            </select>
+        </div>
+        <button class="Submit-button">Generate</button>
+    </form>
+    {{ if .Result }}
+    <div class="output">
+        <p>Generated ASCII Art:</p>
+        <pre class="result">{{ .Result }}</pre>
+    </div>
+    {{ else }}
+    <p class="LetsStart">Lets Start :) </p>
+    {{ end }}
+    <script>
+        function handleEnterKey(event) {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                const textarea = event.target;
+                textarea.value += "\n";
+            }
+        }
+        function validateASCII(event) {
+            const textarea = event.target;
+            const inputValue = textarea.value;
+            const regex = /^[\x20-\x7E\r\n]*$/;
+            const isValid = regex.test(inputValue);
+            if (!isValid) {
+                textarea.value = inputValue.replace(/[^\x20-\x7E\r\n]/g, '');
+            }
+            const englishMessage = document.getElementById("english-message");
+            englishMessage.style.display = isValid ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

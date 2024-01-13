@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Error Page</title>
+    <link rel="stylesheet" type="text/css" href="../style/Error.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Error-container">
+        <h1>{{ .Code }}</h1>
+        <h1>{{ .Message }}</h1>
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
